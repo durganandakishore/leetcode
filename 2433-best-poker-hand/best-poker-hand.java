@@ -1,12 +1,10 @@
 class Solution {
     public String bestHand(int[] ranks, char[] suits) {
-       int rc = 1;  // rank count
-        int sc = 1;  // suit count
-
+       int rc = 1;  
+        int sc = 1;  
         Arrays.sort(ranks);
         Arrays.sort(suits);
 
-        // ✅ Check for Flush (your style)
         for (int i = 0; i < suits.length - 1; i++) {
             if (suits[i] == suits[i + 1]) {
                 sc++;
